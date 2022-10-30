@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KrpW1tnB0saTufebAxTkl0b/G8J8806UsTIlOIP07UAUwRpaRzn03rSUJUQmg5v7lydXXWyvh91DfGPgYwUJZQ==",
+  "dgSpecHash": "s0d89JND94E6QT1envNFw/h82fuO94LC22GzactcIe89C9vuuy1gYCXQuAhIrtsv8FcT+OcjKVbfK4pVG8HcFw==",
   "success": true,
-  "projectFilePath": "E:\\workshop\\Siba\\projects\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj",
+  "projectFilePath": "E:\\workshop\\Siba\\projects\\STMTSystem\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

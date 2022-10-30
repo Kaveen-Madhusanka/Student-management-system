@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\workshop\\Siba\\projects\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj": {}
+    "E:\\workshop\\Siba\\projects\\STMTSystem\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj": {}
   },
   "projects": {
-    "E:\\workshop\\Siba\\projects\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj": {
+    "E:\\workshop\\Siba\\projects\\STMTSystem\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\workshop\\Siba\\projects\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj",
+        "projectUniqueName": "E:\\workshop\\Siba\\projects\\STMTSystem\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj",
         "projectName": "student-management-system-API",
-        "projectPath": "E:\\workshop\\Siba\\projects\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj",
+        "projectPath": "E:\\workshop\\Siba\\projects\\STMTSystem\\BE\\student-management-system-API\\student-management-system-API\\student-management-system-API.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\workshop\\Siba\\projects\\BE\\student-management-system-API\\student-management-system-API\\obj\\",
+        "outputPath": "E:\\workshop\\Siba\\projects\\STMTSystem\\BE\\student-management-system-API\\student-management-system-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
