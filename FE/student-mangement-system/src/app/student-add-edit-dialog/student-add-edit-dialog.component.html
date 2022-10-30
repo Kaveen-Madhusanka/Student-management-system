@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>{{formHeader}}</h1>
+<form [formGroup]="studentForm" (ngSubmit)="onSave()">
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Id</mat-label>
+      <input placeholder="Id" matInput formControlName="id">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input placeholder="Name" matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input placeholder="Address" matInput formControlName="address">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <input placeholder="contact" matInput formControlName="contact">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Parent Name</mat-label>
+      <input placeholder="pName" matInput formControlName="pName">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Save</button>
+  </div>
+</form>
