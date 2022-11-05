@@ -52,12 +52,15 @@ export class StudentGridComponent implements OnInit  {
 
   OpenDialog(enteranimation: any, exitanimation: any,student:any) {
 
-    this.dialog.open(StudentAddEditDialogComponent, {
+    const dialogRef = this.dialog.open(StudentAddEditDialogComponent, {
       enterAnimationDuration: enteranimation,
       exitAnimationDuration: exitanimation,
       width: "50%",
       data:student
     })
+    dialogRef.afterClosed().subscribe(x=>{
+      this.getAllStudents();
+    });
   }
 
   onCreateStudent() {
