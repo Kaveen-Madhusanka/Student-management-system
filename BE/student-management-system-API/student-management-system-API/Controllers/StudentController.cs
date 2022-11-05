@@ -23,6 +23,7 @@ namespace student_management_system_API.Controllers
         public async Task<IResult> GetStudents()
         {
             var result = await _context.Student.ToListAsync();
+            result.OrderBy(x=> x.Id);
             return Results.Ok(result);
         }
 

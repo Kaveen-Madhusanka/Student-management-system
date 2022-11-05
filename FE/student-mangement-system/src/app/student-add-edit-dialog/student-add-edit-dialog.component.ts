@@ -72,13 +72,14 @@ export class StudentAddEditDialogComponent implements OnInit {
   OnCreateStudent() {
     this.studentService.createStudent(this.student).subscribe(x => {
       console.log("inserted");
+      this.toastr.success('successfully Inserted!', 'success');
     });
   }
 
   OnUpdateStudent() {
     this.studentService.updateStudent(this.student).subscribe(x => {
       console.log("Updated");
-      this.toastr.success('Updated', 'Info');
+      this.toastr.success('successfully Updated!', 'success');
     });
   }
 }

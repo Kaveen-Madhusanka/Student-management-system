@@ -9,6 +9,7 @@ import {StudentAddEditDialogComponent} from "../student-add-edit-dialog/student-
 import {ConfirmDialog} from "../Model/confirm-dialog";
 import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
 import * as Console from "console";
+import {ToastrService} from "ngx-toastr";
 
 
 @Component({
@@ -21,7 +22,7 @@ export class StudentGridComponent implements OnInit  {
   displayedColumns: string[] = ['id','name', 'address','contact','parantName','action'];
   dataSource: any;
   @ViewChild(MatPaginator) paginator: MatPaginator = {} as MatPaginator;
-  constructor(private studentService: StudentService,private dialog: MatDialog) { }
+  constructor(private studentService: StudentService,private dialog: MatDialog,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getAllStudents();
@@ -83,6 +84,8 @@ export class StudentGridComponent implements OnInit  {
   deleteStudent(id:number){
     this.studentService.deleteStudent(id).subscribe(x => {
       console.log("Deleted");
+      this.toastr.success('successfully Deleted!', 'success');
+      this.getAllStudents();
     });
   }
 }
