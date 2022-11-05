@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
-
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatInputModule,
     MatDialogModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [MatDialog],
   bootstrap: [AppComponent]

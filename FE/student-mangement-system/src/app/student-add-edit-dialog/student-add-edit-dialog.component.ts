@@ -3,6 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Student} from "../Model/student";
 import {StudentService} from "../student/student.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-student-add-edit-dialog',
@@ -16,7 +17,7 @@ export class StudentAddEditDialogComponent implements OnInit {
   private student: Student ={} as Student;
   constructor(public dialogref: MatDialogRef<StudentAddEditDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data:Student,
-              private studentService: StudentService) { }
+              private studentService: StudentService,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     console.log(this.data);
@@ -77,6 +78,7 @@ export class StudentAddEditDialogComponent implements OnInit {
   OnUpdateStudent() {
     this.studentService.updateStudent(this.student).subscribe(x => {
       console.log("Updated");
+      this.toastr.success('Updated', 'Info');
     });
   }
 }
