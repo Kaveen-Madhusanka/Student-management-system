@@ -11,5 +11,6 @@ namespace student_management_system_API.Infastructure
         }
 
         public DbSet<Studant> Student { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }
