@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using student_management_system_API.Domain;
 using student_management_system_API.Infastructure;
+using student_management_system_API.Model;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -32,9 +34,17 @@ namespace student_management_system_API.Controllers
             if (user != null)
             {
                 var token = GenarateJSONWebToken(user);
-                return Ok(token);
+                var result = new UserDto { Token = token , UserName= user.UserName};
+                return Ok(result);
             }
             return Ok("Incorrect Login");
+        }
+
+        [HttpGet("Test")]
+        [Authorize]
+        public async Task<IActionResult> Test()
+        {
+            return Ok("test");
         }
 
         private string GenarateJSONWebToken(User userInfo)

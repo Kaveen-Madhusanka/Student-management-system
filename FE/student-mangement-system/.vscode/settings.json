@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/94d4ea2c-1c1e-44a3-b877-57077c5298bb/AppServices/subscriptions/94d4ea2c-1c1e-44a3-b877-57077c5298bb/resourceGroups/STMTWebApp/providers/Microsoft.Web/sites/STMTApp",
+    "appService.deploySubpath": "dist"
+}

@@ -7,7 +7,8 @@ import {Student} from "../Model/student";
   providedIn: 'root'
 })
 export class StudentService {
-  readonly url ="https://localhost:7103/api/";
+   readonly url ="https://localhost:7103/api/";
+  //readonly url ="https://student-management-system001.azurewebsites.net/api/";
   constructor(private http: HttpClient) { }
 
   public getStudent(): Observable<any>{
@@ -17,8 +18,6 @@ export class StudentService {
   public getStudentById(studentId: number): Observable<any>{
     let queryParams = new HttpParams();
     queryParams.append('Id',studentId.toString());
-    // return this.http.get<any>("https://localhost:7103/api/Student/GetStudentsById/",
-    //   {params:queryParams});
     return this.http.get<any>(this.url+"Student/GetStudentsById/"+studentId);
   }
 
@@ -33,6 +32,5 @@ export class StudentService {
   public deleteStudent(studentId: number){
     const queryParams = new HttpParams().set('id',studentId.toString());
     return this.http.delete<any>(this.url+"Student",{params:queryParams})
-    //return this.http.delete<any>(this.url+"Student?studantId="+studentId)
   }
 }

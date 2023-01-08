@@ -15,28 +15,32 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import {ToastrModule} from "ngx-toastr";
+import { LoginComponent } from './login/login.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentGridComponent,
     StudentAddEditDialogComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDialogModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    ToastrModule.forRoot(),
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDialogModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        ToastrModule.forRoot(),
+        MatCardModule,
+    ],
   providers: [MatDialog],
   bootstrap: [AppComponent]
 })
