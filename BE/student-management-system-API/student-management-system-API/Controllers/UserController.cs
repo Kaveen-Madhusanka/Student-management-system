@@ -44,7 +44,7 @@ namespace student_management_system_API.Controllers
         [Authorize]
         public async Task<IActionResult> Test()
         {
-            return Ok("test");
+            return Ok(new UserDto { Token= null,UserName= "test"});
         }
 
         private string GenarateJSONWebToken(User userInfo)

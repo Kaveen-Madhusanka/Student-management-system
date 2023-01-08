@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from "@angular/material/table";
 import { StudentGridComponent } from './student-grid/student-grid.component';
@@ -17,6 +17,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import {ToastrModule} from "ngx-toastr";
 import { LoginComponent } from './login/login.component';
 import {MatCardModule} from "@angular/material/card";
+import {TokenInterceptor} from "./public/token.interceptor";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,11 @@ import {MatCardModule} from "@angular/material/card";
         ToastrModule.forRoot(),
         MatCardModule,
     ],
-  providers: [MatDialog],
+  providers: [MatDialog,{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
