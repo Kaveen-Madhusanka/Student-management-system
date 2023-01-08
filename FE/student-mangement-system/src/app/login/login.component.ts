@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "./user.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import {UserService} from "./user.service";
 export class LoginComponent implements OnInit {
 
   form: FormGroup= new FormGroup({});
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService,private router: Router) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
         console.log('token: ',x);
         if (x.token != null){
           localStorage.setItem('Token',x.token);
+          this.router.navigate(['/students']);
         }
       });
     }
